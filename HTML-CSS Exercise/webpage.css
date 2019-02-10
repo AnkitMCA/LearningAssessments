@@ -1,0 +1,63 @@
+a
+{
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  background-color: #222222;
+  padding-right: 9px;
+  padding-left: 8px;
+}
+
+#link_div
+{
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #222222;
+  width: 960px;
+  padding-bottom: 10px;
+  padding-top:10px;
+  margin-left: 100px;
+}
+
+.big_box
+{
+  width: 960px;
+  height: 360px;
+  margin-top: 20px;
+  background-color: #222222;
+  color:white;
+  text-align:center;
+  line-height:360px;
+  font-size: x-large
+}
+
+#para
+{
+  padding-top: 10px;
+  width:960px;
+  background-color: grey;
+  height:50px;
+  margin-top: 19px;
+  margin-bottom: 30px
+}
+
+.imageBox
+{
+  width: 215px;
+  height: 315px;
+  float: left;
+  background-color: #222222;
+  color:white;
+  text-align:center;
+  line-height:315px;
+}
+
+.image_caption
+{
+  text-align:center;
+  width: 215px;
+  height: 30px;
+  float: left;
+  background-color: grey;
+  margin-bottom: 10px;
+}
