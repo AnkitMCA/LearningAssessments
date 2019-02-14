@@ -1,0 +1,27 @@
+<!--
+
+#Ques. 7 Bind a click function to an "click" element and append next "click" next to it.
+
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div>
+    <button>Add Button</button>
+</div>
+
+<script>
+    $( "button" ).click(function() {
+        $( "div" ).append("<button>New Button</button>");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!--
+
+#Ques. 10 Create a dropdown menu using hover method in jquery.
+
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #mydiv
+        {
+            display: inline-block;
+            background-color: yellowgreen;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+<p>Hover Dropdown Example</p>
+<div id="mydiv"><h3>Hover on it</h3></div>
+
+<script>
+    $(document).ready(function(){
+        $("#mydiv").hover(function(){
+            $(this).append("<option value=\"Item 1\">Item 1</option>\n" +
+                "  <option value=\"Item 2\">Item 2</option>\n" +
+                "  <option value=\"Item 3\">Item 3</option>\n" +
+                "  <option value=\"Item 4\">Item 4</option>\n")
+        }
+        , function(){
+            $("option").remove();
+        });
+    });
+</script>
+</div>
+</body>
+</html>

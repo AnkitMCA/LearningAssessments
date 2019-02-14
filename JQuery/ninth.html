@@ -1,0 +1,35 @@
+<!--
+
+#Ques. 9 Get dropdown selected value on onchange event and append in div container.
+
+-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <label>Select list</label>
+    <select id="myList">
+        <option value="JAVA">JAVA</option>
+        <option value="PYTHON">PYTHON</option>
+        <option value="HTML">HTML</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+    </select>
+</div>
+<div id="newDiv">
+
+</div>
+<script>
+    $(document).ready(function () {
+        $("#myList").on("change",function () {
+            $("#newDiv").append("<br>"+$(this).val());
+        })
+    })
+</script>
+</body>
+</html>

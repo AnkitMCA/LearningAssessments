@@ -1,0 +1,23 @@
+<!--
+
+#Ques. 8 Click event not working on element which added dynamically or via script, make it work using .on method.
+
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button>Click me!</button>
+<script>
+    var num=0;
+    $( "body" ).on( "click", "button", function() {
+        $( this ).after("<button>New Button " +(++num)+ "</button>" );
+    });
+</script>
+</body>
+</html>
