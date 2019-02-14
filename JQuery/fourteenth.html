@@ -1,0 +1,64 @@
+<!--
+
+#Ques. 14 Change color of every cell which has number larger than 10.
+
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div>
+<table border="1" style="height: 200px; width: 200px; text-align: center">
+    <tr>
+        <td>10</td>
+        <td>5</td>
+        <td>12</td>
+        <td>28</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>4</td>
+        <td>15</td>
+        <td>17</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>39</td>
+        <td>7</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>4</td>
+        <td>15</td>
+        <td>17</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>54</td>
+        <td>7</td>
+        <td>22</td>
+        <td>9</td>
+    </tr>
+</table>
+</div>
+<script>
+    $("td").each(function () {
+        $cell = $(this);
+        if (parseInt($cell.text()) < 10) {
+            $cell.css("background-color", "red");
+        }
+    });
+</script>
+</body>
+</html>

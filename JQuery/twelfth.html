@@ -1,0 +1,36 @@
+<!--
+
+#Ques. 12 We have bind a click funtion to parent div but we want stop it from performing when user clicks on its child li.
+
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="parent_div"><h3>Click parent div.</h3>
+
+
+        <ul id="child_li">
+            <li>Link 1</li>
+        </ul>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#parent_div").click(function () {
+            alert("Parent Div is clicked.")
+        })
+        $("#child_li").click(function (e) {
+            e.stopPropagation();
+            alert("Child Link is clicked.")
+        })
+    });
+
+</script>
+</body>
+</html>

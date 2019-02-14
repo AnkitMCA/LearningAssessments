@@ -1,0 +1,30 @@
+<!--
+
+#Ques. 15 Retrive the data from server using ajax get call.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({url: "https://jsonplaceholder.typicode.com/todos/100", success: function(result){
+                        $("#div1").html(JSON.stringify(result));
+                    }});
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="div1" style="font-size: large"><h2>Data will be display here</h2></div>
+
+<button>Get Data From API</button>
+
+<p>Click button and wait ..</p>
+
+</body>
+</html>

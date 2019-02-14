@@ -1,0 +1,46 @@
+<!--
+
+#Ques. 16 Add cross button on row and bind click function which make a delete request to server, after success event remove the row from dom.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<h4>Click on cross button and wait for a moment..</h4>
+<table border="2" width="30%" style="text-align: center">
+    <tr id="row1">
+        <td>Ankit</td>
+        <td>JVM</td>
+        <td>Delhi</td>
+        <td><input type="button"  value="X" id="1"></td>
+    </tr>
+    <tr id="row2">
+        <td>Sanju</td>
+        <td>Python</td>
+        <td>Ghaziabad</td>
+        <td><input type="button"  value="X" id="2"></td>
+    </tr>
+
+</table>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script lang="javascript">
+    $(document).ready(function () {
+        $(":button").click(function(){
+            bid=$(this).attr("id");
+            bid="#row"+bid;
+            $.ajax({url:"https://jsonplaceholder.typicode.com/todos/100",success: function(result){
+                    $(bid).remove();
+                }});
+        });
+    });
+</script>
+</body>
+</html>
