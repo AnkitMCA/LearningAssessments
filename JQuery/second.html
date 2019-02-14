@@ -1,0 +1,32 @@
+<!--
+
+#Ques. 2 Select a ID name "#test" and add class "load" when DOM is loaded.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #test {
+            font-weight: lighter;
+        }
+        .load {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<p id="test">Lighter Text</p>
+<button id="btn">Add Class</button>
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            $("#test").addClass("load");
+        })
+    });
+</script>
+</body>
+</html>

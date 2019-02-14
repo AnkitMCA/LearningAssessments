@@ -1,0 +1,25 @@
+<!--
+
+#Ques. 5 Change the font size of ".target" which has parent element with id name "#main".
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#main").children().css( "font-size", "150%" );
+            })
+        });
+    </script>
+</head>
+<body>
+<div id="main">This is parent of .target
+    <p class="target">This is a Child of #main</p>
+</div>
+<button id="btn">Click here</button>
+</body>
+</html>
