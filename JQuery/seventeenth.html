@@ -1,0 +1,47 @@
+<!--
+
+#Ques. 17 Create a image array and in div create a slide show to animate images of delay of 500ms.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slider</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+        }
+        div {
+            background-size: auto;
+            background-position: center;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <script lang="javascript">
+        var array = new Array("seventeen_first.jpg","seventeen_second.jpg","seventeen_third.jpg","seventeen_second.jpg");
+        $(document).ready(function(){
+            var i = 0;
+            $("#slider").css("background-image", "url(" + array[i] + ")");
+            setInterval(function () {
+                i++;
+                if (i == array.length) {
+                    i = 0;
+                }
+                $("#slider").fadeOut("slow", function () {
+                    $(this).css("background-image", "url(" + array[i] + ")");
+                    $(this).fadeIn("slow");
+                });
+            }, 500);
+
+        });
+    </script>
+</head>
+<body>
+<br />
+<div id="slider"></div>
+</body>
+</html>
