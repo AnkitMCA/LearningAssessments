@@ -48,21 +48,19 @@
         </property>
     </bean>
 
-    <bean id="teaRestaurant2" class="Restaurant" autowire="byType">
-        <property name="hotDrink" ref="tea"/>
-    </bean>
-    <bean id="teaRestaurant3" class="Restaurant" autowire="byName">
-        <property name="hotDrink" ref="tea"/>
-    </bean>
-    <bean id="teaRestaurant4" class="Restaurant" autowire="constructor">
-        <constructor-arg ref="tea"/>
-        <property name="hotDrink" ref="tea"/>
-    </bean>
+    <!--ByType is not possible since there are many type of hotDrink.-->
+    <!--<bean id="teaRestaurantByType" class="Restaurant" autowire="byType"/>-->
+
+
+    <bean id="teaRestaurantByName" class="Restaurant" autowire="byName"/>
+    <bean id="hotDrink" class="Tea"/>
+
+
+    <bean id="teaRestaurantByConstructor" class="Restaurant" autowire="constructor"/>
+
 
     <bean id="teaRestaurant1" class="Restaurant" scope="prototype">
         <property name="hotDrink" ref="tea"/>
     </bean>
-
-
 
 </beans>
