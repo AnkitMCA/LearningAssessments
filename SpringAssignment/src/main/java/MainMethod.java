@@ -32,13 +32,13 @@ public class MainMethod {
         complex.getMap().entrySet().forEach(System.out::println);
 
         // 6th Answer & 9th Answer
-        Restaurant r2 = context.getBean("teaRestaurant2",Restaurant.class);
-        r2.getHotDrink().prepareHotDrink();
+//        Restaurant r2 = context.getBean("teaRestaurantByType",Restaurant.class);
+//        r2.getHotDrink().prepareHotDrink();
 
-        Restaurant r3 = context.getBean("teaRestaurant3",Restaurant.class);
+        Restaurant r3 = context.getBean("teaRestaurantByName",Restaurant.class);
         r3.getHotDrink().prepareHotDrink();
 
-        Restaurant r4 = context.getBean("teaRestaurant4",Restaurant.class);
+        Restaurant r4 = context.getBean("teaRestaurantByConstructor",Restaurant.class);
         r4.getHotDrink().prepareHotDrink();
 
         // 7th Answer
