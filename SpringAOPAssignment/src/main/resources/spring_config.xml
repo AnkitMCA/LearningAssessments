@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:annotation-config/>
+    <aop:aspectj-autoproxy/>
+
+    <bean class="Question1.MyEventListener"/>
+
+    <bean id="dummy" class="Question2.Dummy"/>
+    <bean id="eventListener" class="Question2.MyEventListener"/>
+
+    <bean id="eventListener3" class="Question3.MyEventListen"/>
+    <bean id="database" class="Question3.Database"/>
+
+    <bean class="Question4.ServicesAspect"/>
+    <bean id="services" class="Question4.Services"/>
+
+    <bean id="details" class="Question5.Details"/>
+    <bean class="Question5.AspectsClass"/>
+
+    <bean id="allMethods" class="Question6.AllMethods"/>
+    <bean class="Question6.AspectClass"/>
+
+    <bean class="Question7.ServicesAspect"/>
+    <bean id="services7" class="Question7.ServicesMethod"/>
+
+    <bean class="Question8.AspectClass"/>
+    <bean id="methods" class="Question8.Methods"/>
+
+    <bean class="Question9.AspectClass"/>
+    <bean id="tasks" class="Question9.Tasks"/>
+
+</beans>
