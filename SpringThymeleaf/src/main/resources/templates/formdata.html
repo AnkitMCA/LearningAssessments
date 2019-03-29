@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Data</title>
+    <style>
+        .evenRow {
+            background: gray;
+        }
+    </style>
+
+</head>
+<body>
+<div th:include="common-data::header"></div>
+<h3>Employee Form Data</h3>
+<div>
+        <span th:if="${employeeList.get(employeeList.size()-1).getIsAdmin()}">Hello Admin</span>
+        <span th:unless="${employeeList.get(employeeList.size()-1).getIsAdmin()}">Hello User</span>
+</div>
+<br>
+<table border="1px solid">
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>IsAdmin</th>
+        <th>EmpType</th>
+
+    </tr>
+    <tr th:each="emp,rowNum:${employeeList}" th:class="${rowNum.even}?'evenRow'">
+        <td><span th:text="${emp.getUsername()}"/></td>
+        <td><span th:text="${emp.getPassword()}"/></td>
+        <td><span th:text="${emp.getIsAdmin()}"/></td>
+        <td><span th:text="${emp.getEmptype().getValue()}"/></td>
+    </tr>
+</table>
+<br><a href="/showform">Add another employee data</a><br>
+<br>
+<div th:include="common-data::footer"></div>
+</body>
+</html>

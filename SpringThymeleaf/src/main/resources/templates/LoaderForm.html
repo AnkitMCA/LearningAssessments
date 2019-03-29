@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Loader Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<form id="loader-form" th:action="@{'/success'}" th:object="${user}" method="post">
+    <table>
+        <tr>
+            <td>Name :</td>
+            <td><input type="text" th:field="*{name} "></td>
+        </tr>
+        <tr>
+            <td>Email :</td>
+            <td><input type="text" th:field="*{email} "></td>
+        </tr>
+        <tr>
+            <td><input type="submit" th:value="submit"></td>
+        </tr>
+    </table>
+</form>
+
+<img src="/images/loader.gif" id="loading" style="display: none">
+
+</body>
+<script th:src="@{'/javascripts/loadingdata.js'}"></script>
+</html>
